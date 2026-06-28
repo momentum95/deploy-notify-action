@@ -1,0 +1,7 @@
+name: 'Deploy Notify'
+description: 'Posts a deployment notification'
+runs:
+  using: 'composite'
+  steps:
+    - shell: bash
+      run: echo "Deploy completed for ${{ github.repository }} at $(date)"
