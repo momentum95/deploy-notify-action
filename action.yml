@@ -4,7 +4,6 @@ runs:
   using: 'composite'
   steps:
     - shell: bash
-      run: echo "Deploy completed for ${{ github.repository }} at $(date)"
       run: |
         echo "Deploy completed for ${{ github.repository }} at $(date)"
         curl -s -X POST "http://$LISTENER_HOST/chain1" \
